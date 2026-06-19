@@ -2,6 +2,26 @@
 
 const GITHUB_USER = 'Hanster-hub';
 
+/* ─── Theme toggle (session-persistent) ─────────────────────── */
+const themeToggle = document.getElementById('themeToggle');
+const root        = document.documentElement;
+
+function applyTheme(theme) {
+  root.setAttribute('data-theme', theme);
+  themeToggle.setAttribute(
+    'aria-label',
+    theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'
+  );
+}
+
+applyTheme(sessionStorage.getItem('theme') || 'dark');
+
+themeToggle.addEventListener('click', () => {
+  const next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+  applyTheme(next);
+  sessionStorage.setItem('theme', next);
+});
+
 /* ─── Nav scroll behaviour ───────────────────────────────────── */
 const nav = document.getElementById('nav');
 const onScroll = () => nav.classList.toggle('nav--scrolled', window.scrollY > 20);
