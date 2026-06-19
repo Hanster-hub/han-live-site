@@ -378,6 +378,37 @@ a { color: inherit; text-decoration: none; }
 }
 .about-body strong { color: var(--text); font-weight: 600; }
 
+/* ─── About stats row ────────────────────────────────────────── */
+.about-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  min-width: 80px;
+}
+
+.stat__num {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  color: var(--accent-hi);
+  line-height: 1;
+}
+
+.stat__label {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
 /* ─── Skills ─────────────────────────────────────────────────── */
 .skills-grid {
   display: grid;
