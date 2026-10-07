@@ -655,3 +655,22 @@ a { color: inherit; text-decoration: none; }
   .hero__actions { flex-direction: column; align-items: flex-start; }
   .contact-pill  { font-size: 0.82rem; padding: 0.65rem 1.1rem; }
 }
+
+/* Resume experience and credentials */
+#experience .cards,
+#awards .cards {
+  grid-template-columns: repeat(auto-fit, minmax(min(360px, 100%), 1fr));
+}
+.experience-org {
+  color: var(--accent-hi);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+.detail-list {
+  padding-left: 1.15rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.65;
+}
+.detail-list li + li { margin-top: 0.65rem; }
+section[id] { scroll-margin-top: var(--nav-h); }
